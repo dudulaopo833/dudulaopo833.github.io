@@ -20,6 +20,7 @@
     };
     Router.prototype.init = function(){ // 初始化来绑定hashchange事件
         window.addEventListener('hashchange', this.refresh.bind(this));
+        window.addEventListener('load', this.refresh.bind(this)); // 刷新页面也会直接触发匹配hash
     };
 
     window.Router = Router; // 把Router绑定到window上
